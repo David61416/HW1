@@ -1,0 +1,33 @@
+def primerDivisor (n):
+    b=2
+    div=1
+    while div!=0:
+        div=n%b
+        b=b+1
+    return (b-1)
+
+
+def esPrimo (n):
+    m = primerDivisor(n)
+    if m ==n:
+        return (1)
+    else:
+        return (0)
+    
+    
+
+def primeros_fiboPrimos(n):
+    fi=((1+(5**(1/2)))/2)
+    f_n=0
+    for i in range (n):
+        P=esPrimo(i)
+        if P==1:
+            f_n=((fi**i)-(1-fi)**i)/(5**(1/2))
+            print (f_n)
+            
+            
+    
+
+    
+
+primeros_fiboPrimos(5)
